@@ -1,0 +1,51 @@
+body{
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+#tableau-J0, #tableau-J1{
+    width: 50%;
+    margin: 10px 25%;
+}
+.ligne{
+    display: flex;
+    justify-content: flex-start;
+}
+.ligne.desactived{
+    opacity: 0.5;
+}
+.case{
+    height: 30px;
+    width: 30px;
+    background-color: #efefef;
+    border: solid #adadad 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    cursor: pointer;
+}
+.case.touche, .case.touche:hover{
+    background-color: red;
+}
+.case.coule, .case.coule:hover{
+    background-color: green;
+}
+.case.clique{
+    background-color: #aeaeae;
+}
+.case:hover{
+    background-color: #dedede;
+}
+.case.brown{
+    background-color: brown;
+}
+.case.pink{
+    background-color: pink;
+}
+.case.yellow{
+    background-color: yellow;
+}
+.case.black{
+    background-color: black;
+}
+.case.cyan{
+    background-color: cyan;
+}
