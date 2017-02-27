@@ -13,6 +13,9 @@ body{
 .ligne.desactived{
     opacity: 0.5;
 }
+.ligne.desactived .case{
+    cursor: auto;
+}
 .case{
     height: 30px;
     width: 30px;
@@ -21,18 +24,23 @@ body{
     margin-right: 1px;
     margin-bottom: 1px;
     cursor: pointer;
+    font-size: 1.6em;
+    text-align: center;
 }
 .case.touche, .case.touche:hover{
     background-color: red;
 }
 .case.coule, .case.coule:hover{
-    background-color: green;
+    border: solid 1px green;
 }
 .case.clique{
     background-color: #aeaeae;
 }
 .case:hover{
     background-color: #dedede;
+}
+.ligne.desactived .case:hover{
+    background-color: #efefef;
 }
 .case.brown{
     background-color: brown;

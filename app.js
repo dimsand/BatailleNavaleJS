@@ -1,4 +1,4 @@
-var joueurs = new Array({'nom':"Dimitri"}, {'nom':"Ordinateur"});
+var joueurs = new Array({'nom':"Dimitri", 'nb_touche':0}, {'nom':"Ordinateur", 'nb_touche':0});
 var jeu = new Array({"joueur":joueurs[0], "grille":new Array()},{"joueur":joueurs[1],"grille":new Array()});
 var list_orientations = new Array('Horizontal','Vertical');
 var bateaux = new Array(
@@ -60,6 +60,9 @@ if(nb_cases > 20){
 }
 
 $(document).on('click', '.case', function(){
+    if($(this).parent().hasClass('desactived')){
+        return false;
+    }
     var data_x = $(this).attr('data-x');
     var data_y = $(this).attr('data-y');
     if(verifTouche(data_x, data_y)){
@@ -90,15 +93,18 @@ function initialisationGrille(){
 }
 
 function verifTouche(x,y){
+    console.log(jeu[currentJ].grille[x][y]);
     if(jeu[currentJ].grille[x][y].etat == "bateau"){
         jeu[currentJ].grille[x][y].bateau.restant[currentJ]--;
         jeu[currentJ].grille[x][y].etat = "T";
         if(jeu[currentJ].grille[x][y].bateau.restant[currentJ] == 0){
             jeu[currentJ].grille[x][y].bateau.etat[currentJ] = "coule";
-            jeu[currentJ].grille[x][y].etat = "";
+            jeu[currentJ].grille[x][y].etat = "coule";
+            jeu[currentJ].joueur.nb_touche++;
             console.log('coulé !');
         }else{
             jeu[currentJ].grille[x][y].etat = "touche";
+            jeu[currentJ].joueur.nb_touche++;
             jeu[currentJ].grille[x][y].etat = "clique";
         }
     }else if(jeu[currentJ].grille[x][y].etat == "T" || jeu[currentJ].grille[x][y].etat == "X"){
@@ -110,6 +116,8 @@ function verifTouche(x,y){
     }
     // On reconstruit le tableau en HTML CSS
     constructionCssGrille();
+    // On vérifie si un joueur a gagné
+    checkGagnant();
     return true;
 }
 
@@ -180,5 +188,16 @@ function bateauHasard(id_bateau){
         }else{
             bateauHasard(id_bateau);
         }
+    }
+
+}
+
+function checkGagnant(){
+    console.log(jeu[currentJ]);
+    for(J=0; J<2; J++){
+        if(jeu[currentJ].joueur.nb_touche == 17){
+            alert(jeu[currentJ].joueur.nom + " a gagné !");
+        }
+        changeUser();
     }
 }
