@@ -39,7 +39,8 @@ h1{
     text-align: center;
 }
 .case.touche, .case.touche:hover{
-    background-color: red;
+    color: red;
+    font-weight: bold;
 }
 .case.coule, .case.coule:hover{
     border: solid 1px green;
@@ -67,4 +68,11 @@ h1{
 }
 .case.cyan{
     background-color: #3498db;
+}
+
+.img-explose{
+  position: relative;
+  top: -32px;
+  left: -34px;
+  height: 90px;
 }
