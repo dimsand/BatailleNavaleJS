@@ -1,20 +1,31 @@
 body{
     margin: 20px;
     background-color: #f5f5f5;
+    text-align: center;
+}
+h1{
+  font-size: 45px;
 }
 #tableau-J0, #tableau-J1{
-    width: 50%;
-    margin: 10px 25%;
+    width: 48%;
+    margin: 10px 1%;
+    float: left;
 }
 .ligne{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 .ligne.desactived{
     opacity: 0.5;
 }
-.ligne.desactived .case{
+.ligne.desactived .case, .ligne.coordonnees .case, .case.coordonnees{
     cursor: auto;
+}
+.ligne.coordonnees .case, .case.coordonnees{
+  background-color: #bdc3c7;
+}
+.infos_user{
+  margin-top: 10px;
 }
 .case{
     height: 30px;
@@ -33,27 +44,27 @@ body{
 .case.coule, .case.coule:hover{
     border: solid 1px green;
 }
-.case.clique{
-    background-color: #aeaeae;
+#tableau-J1 .ligne .case.clique, #tableau-J1 .ligne .case.coule{
+    color: #c0392b;
 }
-.case:hover{
+.case:hover:not(.case.coordonnees){
     background-color: #dedede;
 }
 .ligne.desactived .case:hover{
     background-color: #efefef;
 }
 .case.brown{
-    background-color: brown;
+    background-color: #d35400;
 }
 .case.pink{
-    background-color: pink;
+    background-color: #9b59b6;
 }
 .case.yellow{
-    background-color: yellow;
+    background-color: #f39c12;
 }
 .case.black{
-    background-color: black;
+    background-color: #34495e;
 }
 .case.cyan{
-    background-color: cyan;
+    background-color: #3498db;
 }
