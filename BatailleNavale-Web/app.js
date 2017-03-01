@@ -1,6 +1,6 @@
 // INITIALISATION VARIABLES
 // Objets et tableaux
-var joueurs = new Array({'nom':"Vous", 'nb_touche':0, 'nb_coups':0}, {'nom':"Ordinateur", 'nb_touche':0, 'nb_coups':0});
+var joueurs = new Array({'nom':"Vous", 'nb_touche':0, 'nb_coups':0, 'last_coup':null}, {'nom':"Ordinateur", 'nb_touche':0, 'nb_coups':0, 'last_coup':null});
 var jeu = new Array({"joueur":joueurs[0], "grille":new Array()},{"joueur":joueurs[1],"grille":new Array()});
 var list_orientations = new Array('Horizontal','Vertical');
 var bateaux = new Array(
