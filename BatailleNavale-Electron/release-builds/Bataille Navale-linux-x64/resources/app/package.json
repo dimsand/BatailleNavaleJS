@@ -1,0 +1,22 @@
+{
+  "name": "bataille-navale",
+  "productName": "Bataille Navale",
+  "version": "0.1.0",
+  "description": "Version exécutable de la bataille navale javascript",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-linux" :"electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "bataille",
+    "navale",
+    "jeu"
+  ],
+  "author": "Dimitri Sandron",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  }
+}

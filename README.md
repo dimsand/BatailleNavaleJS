@@ -2,6 +2,10 @@
 
 ![Capture d'écran](./screenshot_bataille_navale.png)
 
+## Utilisation
+- Version Web : Charger la page **index.html**
+- Version Desktop (Windows, Linux, Mac) : `BatailleNavale-Electron` > `release-builds` > Choisissez votre version et lancez le fichier executable
+
 ## Fonctionnalités
 - Jeu contre l'Ordinateur
 - Choix de la taille de la grille
@@ -9,11 +13,10 @@
 - Animations
 
 ## Règles du jeu
-1. Charger la page **index.html**
-2. Entrer le nombre de cases que vous souhaitez _(Compris entre 10 et 26 - 10 par défaut)_
-3. Saisissez votre nom _('Vous' par défaut)_
-4. L'ordinateur choisi aléatoirement les coordonnées de votre jeu **(à gauche)**
-5. Pour attaquer votre adversaire, cliquer sur une case du jeu de l'ordinateur **(à droite)**
+1. Entrer le nombre de cases que vous souhaitez _(Compris entre 10 et 26 - 10 par défaut)_
+2. Saisissez votre nom _('Vous' par défaut)_
+3. L'ordinateur choisi aléatoirement les coordonnées de votre jeu **(à gauche)**
+4. Pour attaquer votre adversaire, cliquer sur une case du jeu de l'ordinateur **(à droite)**
 
 ## About
 - TP Javascript (MASTER 1 - Développeur Full-Stack)
